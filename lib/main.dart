@@ -3,7 +3,7 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:litelocadeserta/game_view.dart';
 import 'package:flutter/foundation.dart'
-    show debugDefaultTargetPlatformOverride;
+    show debugDefaultTargetPlatformOverride, kIsWeb;
 
 void _setTargetPlatformForDesktop() {
   // No need to handle macOS, as it has now been added to TargetPlatform.
@@ -13,7 +13,9 @@ void _setTargetPlatformForDesktop() {
 }
 
 void main() {
-  _setTargetPlatformForDesktop();
+  if (!kIsWeb) {
+    _setTargetPlatformForDesktop();
+  }
   runApp(MyApp());
 }
 
