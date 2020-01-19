@@ -23,7 +23,7 @@ class _GameViewState extends State<GameView> {
             return CircularProgressIndicator();
             break;
           case ConnectionState.done:
-            print(snapshot);
+//            print(snapshot.data.body);
             var story = Story.fromJson(snapshot.data.body);
             return StoryView(story: story);
         }

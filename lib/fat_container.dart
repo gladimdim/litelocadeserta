@@ -17,6 +17,7 @@ class FatContainer extends StatelessWidget {
           child: Text(
             text,
             textAlign: TextAlign.center,
+            style: TextStyle(fontFamily: 'Roboto'),
           ),
         ),
       ),
